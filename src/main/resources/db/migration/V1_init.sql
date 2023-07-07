@@ -1,0 +1,2 @@
+create table notes (id serial primary key,name varchar(50),note varchar(255),created int,owner_id int);
+insert into notes (name,note,owner_id) values ('Заметка 1', 'Привет мир',1),('Заметка 2', 'Привет я',1),('Заметка 3', 'Привет страна',1);

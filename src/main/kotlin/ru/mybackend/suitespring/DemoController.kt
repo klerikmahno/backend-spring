@@ -16,7 +16,7 @@ class DemoController {
 
     @GetMapping("/new_note")
     fun createNote(@RequestParam name: String, @RequestParam note: String): NoteDTO {
-        var newNote = NoteDTO(count, name, note, System.currentTimeMillis())
+        var newNote = NoteDTO(count, name, note, System.currentTimeMillis(),1)
         count = +1
         return newNote
     }
@@ -24,9 +24,9 @@ class DemoController {
     @GetMapping("/notes")
     fun getNotes(): List<NoteDTO> {
         return listOf(
-            NoteDTO(1, "Привет1", "Привет мир", System.currentTimeMillis()),
-            NoteDTO(2, "Привет2", "Привет я", System.currentTimeMillis()),
-            NoteDTO(3, "Привет3", "Привет моя страна", System.currentTimeMillis()),
+            NoteDTO(1, "Привет1", "Привет мир", System.currentTimeMillis(),1),
+            NoteDTO(2, "Привет2", "Привет я", System.currentTimeMillis(),1),
+            NoteDTO(3, "Привет3", "Привет моя страна", System.currentTimeMillis(),1),
         )
     }
 }

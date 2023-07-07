@@ -8,4 +8,5 @@ data class NoteDTO(
     var name: String,
     var note: String,
     var data: Long,
+    var ownerId: Int
 )
